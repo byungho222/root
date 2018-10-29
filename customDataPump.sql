@@ -1,7 +1,8 @@
 
 -- @db   Oracle
 -- @desc Excel에 담긴 Data를 DDL 없이 테이블 형식으로 만든다.
---       (DDL 리퀘스트 하기가 번거로워서)
+--       (1. DDL 리퀘스트 하기가 번거로워서)
+--       (2. F_ARRAY_TO_RECORD를 두번쓰면 bhkim이 text.bh랑 매핑될까봐서)
 SELECT
     SUBSTR( COLUMN_VALUE, 1, INSTR(COLUMN_VALUE, '|') - 1 ) AS KEYWORD,
     SUBSTR( COLUMN_VALUE, INSTR(COLUMN_VALUE, '|') + 1, LENGTH(COLUMN_VALUE) ) AS URL,
