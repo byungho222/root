@@ -8,7 +8,7 @@ SELECT
 FROM
     TABLE (
       F_ARRAY_TO_RECORD('
-        ChamaMS|https://prod.spotlight-education.com/v-Qo6gg772wu.mp4,  --sheet의 데이터를 단순히 String으로 가공하였음
-        CCES|https://prod.spotlight-education.com/v-3uT1hlqckj.mp4
+        bhkimTest|https://bh.test,  --sheet의 데이터를 단순히 String으로 가공하였음
+        Testbhkim|https://text.bh
       ', ',')
     );
