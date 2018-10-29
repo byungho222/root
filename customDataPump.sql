@@ -7,9 +7,9 @@ SELECT
     SUBSTR( COLUMN_VALUE, 1, INSTR(COLUMN_VALUE, '|') - 1 ) AS KEYWORD,
     SUBSTR( COLUMN_VALUE, INSTR(COLUMN_VALUE, '|') + 1, LENGTH(COLUMN_VALUE) ) AS URL,
 FROM
-    TABLE (
+    TABLE (    
       F_ARRAY_TO_RECORD('
-        bhkimTest|https://bh.test,  --sheet의 데이터를 단순히 String으로 가공하였음
+        bhkimTest|https://bh.test,  
         Testbhkim|https://text.bh
-      ', ',')
+      ', ',')                       -- 첫번째 인자 : sheet의 데이터를 단순히 String으로 가공하였음
     );
